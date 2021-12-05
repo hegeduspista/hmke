@@ -1,0 +1,1 @@
+pyinstaller spss.py -w --noconsole --name SolarPanelSystemSOFT --add-data "ajanlatok";ajanlatok --add-data "kepek";kepek --add-data "db";db --add-data "font";font --add-data "xls_csv";xls_csv --add-data hmke.ico;. -i hmke.ico
