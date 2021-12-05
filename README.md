@@ -1,0 +1,2 @@
+# hmke
+Napelemes rendszer kalkulátor
