@@ -408,11 +408,6 @@ win.resizable(width=False, height=False)
 win.configure(bg="gray25")
 
 
-# def open_db_update():
-#     mappa = getcwd()
-#     startfile(mappa + '/updateDB.exe')
-
-
 def kilepes():
     win.destroy()
 
@@ -428,21 +423,12 @@ menu.add_cascade(label="Adatbázis", menu=file)
 win.title("Napelemes rendszer kalkulátor [HMKE] - SolarPanelSystemSOFT")
 win.iconbitmap(bitmap="hmke.ico")
 
-user_controll()
+# user_controll()
 text_font = "Verdana 10"
 csomag_text_font = "Verdana 8"
 bg = "gray25"
 fg = "white"
 
-# win = Canvas(win, bg="red")
-# win.grid(row=0, column=0, sticky="w")
-#
-# scrollbar = Scrollbar(win, orient="vertical", command=win.yview)
-# scrollbar.grid(row=0, column=0, sticky="nse")
-#
-#
-# win.configure(yscrollcommand=scrollbar.set, xscrollcommand=scrollbar.set)
-# scrollbar.config(command=win.yview())
 
 panelszam = StringVar()
 eves_kwh_fogyas = StringVar()
@@ -612,26 +598,6 @@ teto_dolesszog_combo["value"] = teto_dolesszog
 teto_dolesszog_combo.set("válasszon dőlésszöget")
 teto_dolesszog_combo.grid(row=2, column=1, pady=5, sticky="e")
 
-# def jaras_nev(event):
-#     jaras_combo.set('válasszon járást')
-#     if megye_combo.get() == "Budapest":
-#         megye_neve = "Budapest"
-#     else:
-#         megye_neve = megye_combo.get() + " megye"
-
-# conn = db.connect('db/elmu.db')
-# cur = conn.cursor()
-# sql = "SELECT jaras FROM regio_kedvezmeny WHERE megye='" + megye_neve + "'"
-# data = cur.execute(sql)
-# jaras = data.fetchall()
-#
-# jaras_nevek = []
-# for jarasok in jaras:
-#     jaras_nevek.append(jarasok[0])
-#
-# # conn.commit()
-#
-# jaras_combo['value'] = jaras_nevek
 
 
 Label(
@@ -643,14 +609,6 @@ megye_combo = Combobox(adatbekeres_frame, width=25,
 megye_combo["value"] = megye_nev
 megye_combo.set("válasszon megyét")
 megye_combo.grid(row=3, column=1, pady=5, sticky="e")
-
-
-# Label(adatbekeres_frame, text="Járás:", font=text_font, bg=bg, fg=fg, width=23, anchor="w") \
-#     .grid(row=4, column=0, padx=10, pady=5)
-# jaras_combo = Combobox(adatbekeres_frame, width=25, justify="center", state="readonly")
-#
-# jaras_combo.set('válasszon járást')
-# jaras_combo.grid(row=4, column=1, pady=5, sticky="e")
 
 
 def rendszer_meret():
